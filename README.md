@@ -68,11 +68,15 @@ Overall, this works similarly to how next.js approaches the issue, but the resul
 ## deps
 
 [Wouter](https://github.com/molefrog/wouter) is used for routing
+
 [faker.js](https://fakerjs.dev/) is used for faking data - **this is an example of a massive module that is not loaded client-side**
+
 [day.js](https://day.js.org/) is used for time-related things - **this module is included in the client bundle**
 
 [webpack](https://webpack.js.org/) handles bundling, transpiling, module replacement, style processing and much more.
+
 [CSS Modules](https://github.com/css-modules/css-modules) are used for styles because of the perf benefits of this approach. **CSS class identifiers are im dev mode everywhere, they will be much shorter in production builds**, further reducing bundle sizes.
+
 [typed-css-modules](https://github.com/Quramy/typed-css-modules) creates type definitions for CSS files, which brings this approach up to be almost on par with **css-in-ts** solutions.
 
 ## Running
