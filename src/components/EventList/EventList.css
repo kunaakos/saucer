@@ -1,0 +1,6 @@
+.dayLabel {
+    font-family: 'OpenRunde';
+    font-size: 1rem;
+    opacity: 0.6;
+    margin: calc(2 * var(--const-card-spacing)) 0 var(--const-card-spacing) var(--const-card-pad-h);
+}

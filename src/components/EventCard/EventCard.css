@@ -1,0 +1,102 @@
+/**
+ * NOTE: layout is described on the container, on a per-screen basis.
+ * In short: set padding and display modes for components
+ * here and here only.
+ * This is a simple approach and works tremendously well
+ * for complex layouts that change over mobile and desktop.
+ */
+.container {
+    position: relative;
+    & + & {
+        margin-top: var(--const-card-spacing);
+    }
+    display: flex;
+    /* Desktop layout */
+    @media (min-width: 1023px) {
+        flex-direction: row;
+        align-items: center;
+        & > * + * {
+            margin-left: var(--const-card-pad-h);
+        }
+        .time {
+            flex-basis: 2.5rem;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        .description {
+            align-self: flex-start;
+            flex-grow: 1;
+        }
+        .nameAndTags {
+            flex-basis: 25%;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        
+    }
+    /* Mobile layout */
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        & > * + * {
+            margin-top: var(--const-card-pad-v);
+        }
+        .contextMenu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: var(--const-card-pad-h);
+            margin-top: var(--const-card-pad-v);
+        }
+    }
+}
+
+.time,
+.name,
+.tags,
+.description,
+.price {
+    font-family: 'OpenRunde';
+}
+
+.time {
+    opacity: 0.6;
+}
+
+.nameAndTags {
+    display: flex;
+    flex-direction: column;
+}
+
+.tags {
+    & > * + * {
+        margin-left: 0.25rem;
+    }
+}
+
+.canceledTag,
+.soldOutTag {
+    font-size: 0.6rem;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.soldOutTag {
+    color: orange;
+}
+
+.canceledTag {
+    color: red;
+}
+
+.description {
+    opacity: 0.6;
+}
+
+.contextMenu {
+    cursor: pointer;
+    position: relative;
+    &:before {
+        content: '⋮' 
+    }
+}

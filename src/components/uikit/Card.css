@@ -1,0 +1,5 @@
+.card {
+    border: var(--const-border-thickness) solid black;
+    border-radius: var(--const-card-border-radius);
+    padding: var(--const-card-pad-v) var(--const-card-pad-h);
+}

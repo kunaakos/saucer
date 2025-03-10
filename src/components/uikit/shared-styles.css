@@ -1,0 +1,12 @@
+.input {
+    all: unset; /* NOTE: aggressive CSS reset */
+    font-family: 'OpenRunde';
+    font-size: 1rem;
+    border: var(--const-border-thickness) solid var(--theme-text-color);
+    padding: var(--const-input-pad-v) var(--const-input-pad-h);
+    border-radius: var(--const-input-border-radius);
+    margin: 0;
+    &:focus {
+        outline: var(--const-outline-thickness) solid var(--theme-highlight-color);
+    }
+}

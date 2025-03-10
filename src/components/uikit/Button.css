@@ -1,0 +1,5 @@
+.button {
+    &:global(.primary) {
+        background-color: var(--theme-highlight-color);
+    }
+}

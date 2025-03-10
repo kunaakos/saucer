@@ -1,0 +1,57 @@
+html {
+    --theme-bg-color: white;
+    --theme-text-color: black;
+    --theme-highlight-color: gold;
+    --const-card-spacing: 1rem;
+    --const-card-row-spacing: 0.6rem;
+    --const-card-pad-h: 1rem;
+    --const-card-pad-v: 0.8rem;
+    --const-input-pad-h: 1rem;
+    --const-input-pad-v: 0.25rem;
+    --const-outline-thickness: 3px;
+    --const-border-thickness: 1px;
+    --const-card-border-radius: 1rem;
+    --const-input-border-radius: 0.5rem;
+    color: var(--theme-text-color);
+}
+
+body {
+    /* margin: 0; */
+    user-select: none;
+    font-size: 16px;
+    /* max-width: 640px; */
+    margin: 1rem;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'OpenRunde';
+    font-weight: normal;
+    color: #130e03;
+}
+
+p, a {
+    font-size: 1.4rem;
+}
+
+@font-face {
+    font-family: 'OpenRunde';
+    font-weight: normal;
+    src:
+        url('/assets/font/OpenRunde-Regular.woff') format('woff'),
+        url('/assets/font/OpenRunde-Regular.woff') format('woff2');
+}
+
+@font-face {
+    font-family: 'OpenRunde';
+    font-weight: bold;
+    src:
+        url('/assets/font/OpenRunde-Bold.woff') format('woff'),
+        url('/assets/font/OpenRunde-Bold.woff') format('woff2');
+}

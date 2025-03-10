@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    margin-bottom: calc(2* var(--const-card-spacing));
+}
+
+.link {
+    position: relative;
+
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    & + & {
+        margin-left: var(--const-card-spacing);
+    }
+    &:global(.active) {
+        color: var(--theme-highlight-color);
+    }
+
+    &:focus {
+        outline: none;
+        &::before {
+            box-sizing: border-box;
+            display: block;
+            content: '';
+            outline: none;
+            border: var(--const-outline-thickness) solid var(--theme-highlight-color);
+            border-radius: var(--const-input-border-radius);
+            width: calc(100% + 2 * var(--const-input-pad-h));
+            height: calc(100% + 2* var(--const-input-pad-v));
+            position: absolute;
+            top: calc(-1 * var(--const-input-pad-v));
+            left: calc(-1 * var(--const-input-pad-h));
+        }
+    }
+}
